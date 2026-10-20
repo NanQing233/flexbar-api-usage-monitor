@@ -1,0 +1,85 @@
+{
+  "name": "API Usage Monitor",
+  "uuid": "com.nanqing.apiusage",
+  "version": "0.1.0",
+  "author": "南清",
+  "entry": "backend/plugin.cjs",
+  "description": "实时监控 DeepSeek、Kimi、ChatGPT、Claude 及自定义 API 的余额与用量。每个按键可独立选择要显示的 API；宽度、颜色和字号使用 FlexDesigner 原生按键样式；全局设置仅保存各提供商的密钥与接口配置。",
+  "repo": "",
+  "sdk": {
+    "version": "1.0.0"
+  },
+  "software": {
+    "minimumVersion": "1.0.0"
+  },
+  "os": [
+    {
+      "platform": "mac",
+      "minimumVersion": "10.15"
+    },
+    {
+      "platform": "windows",
+      "minimumVersion": "10"
+    }
+  ],
+  "device": [
+    {
+      "name": "flexbar",
+      "version": "1.0.0"
+    }
+  ],
+  "configPage": "global_config",
+  "keyLibrary": {
+    "title": "$PluginName",
+    "style": {
+      "icon": "mdi mdi-chart-bar",
+      "flags": []
+    },
+    "children": [
+      {
+        "title": "$Monitor.Title",
+        "tip": "$Monitor.Tip",
+        "cid": "com.nanqing.apiusage.monitor",
+        "config": {
+          "keyType": "default",
+          "clickable": false,
+          "platform": [
+            "windows",
+            "mac"
+          ]
+        },
+        "style": {
+          "icon": "mdi mdi-pulse",
+          "width": 240,
+          "bgColor": "#4D6BFA",
+          "fgColor": "#ffffff",
+          "showTitle": true,
+          "showIcon": false,
+          "showImage": false,
+          "showEmoji": false,
+          "fontSize": 18,
+          "titlePos": {
+            "X": 50,
+            "Y": 50
+          }
+        },
+        "data": {
+          "provider": "deepseek",
+          "label": "DeepSeek"
+        }
+      }
+    ]
+  },
+  "local": {
+    "en": {
+      "PluginName": "API Usage Monitor",
+      "Monitor.Title": "API Usage",
+      "Monitor.Tip": "Real-time balance and usage monitor for DeepSeek, Kimi, ChatGPT, Claude and custom APIs"
+    },
+    "zh-CN": {
+      "PluginName": "API 用量监控",
+      "Monitor.Title": "API 用量",
+      "Monitor.Tip": "实时监控 DeepSeek、Kimi、ChatGPT、Claude 及自定义 API 的余额与用量"
+    }
+  }
+}
