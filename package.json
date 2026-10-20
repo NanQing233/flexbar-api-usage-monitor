@@ -1,0 +1,32 @@
+{
+  "name": "flexbar-api-usage-monitor",
+  "version": "0.1.0",
+  "description": "实时监控 DeepSeek、Kimi、ChatGPT、Claude 及自定义 API 的余额与用量",
+  "main": "src/plugin.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "flexcli plugin dev",
+    "pack": "powershell -ExecutionPolicy Bypass -File package-flexplugin.ps1"
+  },
+  "keywords": [
+    "flexbar",
+    "flexdesigner",
+    "plugin",
+    "api",
+    "usage",
+    "deepseek",
+    "kimi",
+    "chatgpt",
+    "claude"
+  ],
+  "author": "南清",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.0"
+  },
+  "dependencies": {
+    "@eniac/flexdesigner": "^1.0.5"
+  }
+}
