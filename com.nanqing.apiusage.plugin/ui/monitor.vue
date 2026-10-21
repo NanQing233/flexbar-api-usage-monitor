@@ -26,6 +26,12 @@
         />
       </v-col>
 
+      <v-col cols="12">
+        <div class="text-caption text-medium-emphasis">
+          设备字体不含中文字形，标题中的中文会显示成方框；名称请尽量使用英文/数字（全局设置里可关闭该限制）。
+        </div>
+      </v-col>
+
     </v-row>
   </v-container>
 </template>

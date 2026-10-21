@@ -5,8 +5,11 @@
   "main": "src/plugin.js",
   "scripts": {
     "build": "rollup -c",
+    "test": "node test/verify.js",
     "dev": "flexcli plugin dev",
-    "pack": "powershell -ExecutionPolicy Bypass -File package-flexplugin.ps1"
+    "pack": "powershell -ExecutionPolicy Bypass -File package-flexplugin.ps1",
+    "pack:repo": "powershell -ExecutionPolicy Bypass -File make-repo-package.ps1",
+    "deploy": "powershell -ExecutionPolicy Bypass -File install.ps1"
   },
   "keywords": [
     "flexbar",
@@ -24,7 +27,8 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^15.2.0"
+    "@rollup/plugin-node-resolve": "^15.2.0",
+    "rollup": "^4.64.12"
   },
   "dependencies": {
     "@eniac/flexdesigner": "^1.0.5"

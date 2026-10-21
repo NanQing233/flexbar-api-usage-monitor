@@ -14,5 +14,5 @@ export default {
     commonjs(),
     json()
   ],
-  external: ['fs', 'path', 'os', 'util', /^node:/]
+  external: ['fs', 'path', 'os', 'util', 'https', 'http', 'zlib', /^node:/]
 };
